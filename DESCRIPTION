@@ -7,3 +7,4 @@ Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
 Depends: RColorBrewer
 Suggests:
 Imports: 
+License: Artistic-2.0
