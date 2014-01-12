@@ -1,0 +1,3 @@
+importFrom(RColorBrewer, brewer.pal)
+
+export(mypar,shist,splitit,as.fumeric)

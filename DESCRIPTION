@@ -6,5 +6,10 @@ Author: Rafael A. Irizarry, Mike Love
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
 Depends: RColorBrewer
 Suggests:
-Imports: 
+Imports: RColorBrewer
 License: Artistic-2.0
+Collate: mypar.R
+	splitit.R
+	as.fumeric.R
+	shist.R
+LazyData: yes
