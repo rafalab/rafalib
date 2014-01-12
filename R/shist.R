@@ -17,9 +17,6 @@ shist <- function(z, unit, plotHist = TRUE, add = FALSE,
         plot(h, col = "grey", main = main, xlab = deparse(substitute(z)), ylim = ylim, 
             xlim = xlim)
     } else {
-        ymax <- ymax
-        h <- hist(z, breaks = seq(from = min(z) - unit, to = max(z) + unit, 
-            by = unit), plot = FALSE)
         if (!add) {
             plot(0, 0, type = "n", xlim = xlim, ylim = ylim, xlab = deparse(substitute(z)), 
                 ylab = "Frequency", main = main)
