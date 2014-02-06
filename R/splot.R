@@ -1,6 +1,6 @@
 splot <- function(x,y,n=10000,subset=NULL,xlab=NULL,ylab=NULL,...){
     if(is.null(xlab)) xlab=deparse(substitute(x))
-    if(is.null(ylab)) ylab=deparse(substitute(x))
+    if(is.null(ylab)) ylab=deparse(substitute(y))
     if(!is.null(subset)){
         x=x[subset]
         y=y[subset]
