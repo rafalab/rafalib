@@ -1,5 +1,5 @@
 Package: rafalib
-Version: 0.0.2
+Version: 0.0.3
 Title: Convenience functions used by Rafa
 Description: A series of shortcuts for routine tasks 
 Author: Rafael A. Irizarry, Mike Love
@@ -13,4 +13,5 @@ Collate: mypar.R
 	as.fumeric.R
 	shist.R
 	splot.R
+	maplot.R
 LazyData: yes
