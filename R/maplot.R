@@ -1,5 +1,5 @@
 maplot <- function(x,y,n=10000,subset=NULL,xlab=NULL,ylab=NULL,
-                   curve.add=TRUE,curve.col=2,curve.span=2/3,
+                   curve.add=TRUE,curve.col=2,curve.span=1/3,
                    curve.lwd=2,curve.n=2000,...){
     if(is.null(xlab)) xlab="A"
     if(is.null(ylab)) ylab="M"
