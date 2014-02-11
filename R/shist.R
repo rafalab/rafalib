@@ -1,7 +1,9 @@
 shist <- function(z, unit = 1, plotHist = FALSE, add = FALSE,
-                  xlim, ylim, ...) {
+                  xlim, ylim, main, ...) {
   n <- length(z)
-  main <- paste("Shistogram of", deparse(substitute(z)))
+  if(missing(main)){
+      main <- paste("Shistogram of", deparse(substitute(z)))
+  }
   d <- density(z)
   ymax <- max(d$y * n * unit)
   if (missing(xlim)) {
@@ -27,7 +29,7 @@ shist <- function(z, unit = 1, plotHist = FALSE, add = FALSE,
   lines(d$x, d$y * n * unit, ...)
   
   if (!add) {
-    arrows(min(z) - unit, ymax, min(z), ymax, angle = 90, code = 3, length = 0.1)
-    text(min(z), ymax, paste("unit =", unit), pos = 4)
+    arrows(max(z) - unit, ymax, max(z), ymax, angle = 90, code = 3, length = 0.1)
+    text(max(z)-unit, ymax, paste("unit =", unit), pos = 2)
   }
 }
