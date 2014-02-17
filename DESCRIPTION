@@ -15,4 +15,5 @@ Collate: mypar.R
 	splot.R
 	maplot.R
 	myBiocLite.R
+	mypclust.R
 LazyData: yes
