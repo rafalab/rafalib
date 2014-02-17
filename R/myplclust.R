@@ -1,4 +1,4 @@
-myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust$labels)), hang=0.1,...){
+myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust$labels)), hang=0.1, xlab="", sub="", ...){
  ## modifiction of plclust for plotting hclust objects *in colour*!
  ## Copyright Eva KF Chan 2009
  ## Arguments:
@@ -15,6 +15,6 @@ myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust
     x <- abs(x)
     y <- y[order(x)]
     x <- x[order(x)]
-    plot( hclust, labels=FALSE, hang=hang, ... )
+    plot( hclust, labels=FALSE, hang=hang, xlab=xlab, sub=sub, ... )
     text( x=x, y=y[hclust$order]-(max(hclust$height)*hang), labels=labels[hclust$order], col=lab.col[hclust$order], srt=90, adj=c(1,0.5), xpd=NA, ... )
 }
