@@ -16,5 +16,5 @@ myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust
     y <- y[order(x)]
     x <- x[order(x)]
     plot( hclust, labels=FALSE, hang=hang, ... )
-    text( x=x, y=y[hclust$order]-(max(hclust$height)*hang), labels=lab[hclust$order], col=lab.col[hclust$order], srt=90, adj=c(1,0.5), xpd=NA, ... )
+    text( x=x, y=y[hclust$order]-(max(hclust$height)*hang), labels=labels[hclust$order], col=lab.col[hclust$order], srt=90, adj=c(1,0.5), xpd=NA, ... )
 }
