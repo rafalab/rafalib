@@ -1,11 +1,15 @@
 getCelfileDates <- function(filenames,...){
-    dates<-vector("character",length(filenames))
-    for(i in seq(along=dates)){
+    chardates<-vector("character",length(filenames))
+    for(i in seq(along=chardates)){
         tmp<-affyio::read.celfile.header(filenames[i],info="full")
-##        dates[i]<-strsplit(tmp$ScanDate,"\ ")[[1]][1]
-        ##some cell files do not have a space
-        dates[i]<-substring(tmp$ScanDate,1,10)
+        chardates[i]<-strsplit(tmp$ScanDate,"T|\ ")[[1]][1]
+     
     }
-    dates<-as.Date(dates,"%m/%d/%y")
+    dates<-as.Date(rep(NA,length(chardates)))
+    ind <- grep("-",chardates)
+    if(length(ind)>0) dates[ind]<-as.Date(chardates[ind],"%Y-%m-%d")
+    ind <- grep("/",chardates)
+    if(length(ind)>0) dates[ind]<-as.Date(chardates[ind],"%m/%d/%y")
+
     return(dates)
 }
