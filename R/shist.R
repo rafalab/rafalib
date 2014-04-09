@@ -1,4 +1,4 @@
-shist <- function(z, unit = .5 * sd(x),
+shist <- function(z, unit = .5 * sd(z),
                   bw = unit, n, from, to,
                   plotHist = FALSE, add = FALSE,
                   xlab = deparse(substitute(z)),
