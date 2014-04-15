@@ -1,5 +1,5 @@
 shist <- function(z, unit = .5 * sd(z),
-                  bw = unit, n, from, to,
+                  bw="nrd0", n, from, to,
                   plotHist = FALSE, add = FALSE,
                   xlab = deparse(substitute(z)),
                   ylab = "Frequency",
@@ -12,7 +12,7 @@ shist <- function(z, unit = .5 * sd(z),
     xlim <- c(min(z) - unit, max(z) + unit)
   }
   if (missing(ylim)) {
-    ylim <- c(0, 1.1 * ymax)
+    ylim <- c(0, 1.2 * ymax)
   }
   if (plotHist) {
     h <- hist(z, breaks = seq(from = min(z) - unit, to = max(z) + unit, 
@@ -31,7 +31,7 @@ shist <- function(z, unit = .5 * sd(z),
   lines(d$x, d$y * n * unit, ...)
   
   if (!add) {
-    arrows(max(z) - unit, ymax, max(z), ymax, angle = 90, code = 3, length = 0.1)
-    text(max(z) - unit, ymax, paste("unit =", sprintf("%.3f", unit)), pos = 2)
+    arrows(max(z) - unit, 1.1*ymax, max(z), 1.1*ymax, angle = 90, code = 3, length = 0.1)
+    text(max(z) - unit, 1.1*ymax, paste("unit =", sprintf("%.2g", unit)), pos = 2)
   }
 }
