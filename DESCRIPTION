@@ -17,4 +17,6 @@ Collate: mypar.R
 	myBiocLite.R
 	myplclust.R
 	getCelfileDates.R
+	sboxplot.R
+	qcut.R
 LazyData: yes
