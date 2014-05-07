@@ -5,9 +5,9 @@ shist <- function(z, unit = .5 * sd(z),
                   ylab = "Frequency",
                   xlim, ylim,
                   main = paste("Shistogram of", deparse(substitute(z))), ...) {
-  n <- length(z)
+  lz <- length(z)
   d <- density(z, bw=bw, n=n, from=from, to=to)
-  ymax <- max(d$y * n * unit)
+  ymax <- max(d$y * lz * unit)
   if (missing(xlim)) {
     xlim <- c(min(z) - unit, max(z) + unit)
   }
@@ -28,7 +28,7 @@ shist <- function(z, unit = .5 * sd(z),
   }
   
   # here is the one line of shist-ty code:
-  lines(d$x, d$y * n * unit, ...)
+  lines(d$x, d$y * lz * unit, ...)
   
   if (!add) {
     arrows(max(z) - unit, 1.1*ymax, max(z), 1.1*ymax, angle = 90, code = 3, length = 0.1)
