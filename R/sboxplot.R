@@ -20,17 +20,17 @@ sboxplot <- function(x, ...) {
         med <- median(x[[i]])
         polygon(i + c(-.1,-.1,.1,.1), c(box, rev(box)))
         segments(i - .1, med, i + .1, med, lwd=3)
-        if (lens[i] < cuts[2]) {
-          iqr <- diff(box)
-          out <- box[1] - x[[i]] > iqr | x[[i]] - box[2] > iqr
-          segments(i, box[1], i, min(x[[i]][!out]))
-          segments(i, box[2], i, max(x[[i]][!out]))
-          if (sum(out) > 0) {
+        iqr <- diff(box)
+        out <- box[1] - x[[i]] > iqr | x[[i]] - box[2] > iqr
+        segments(i, box[1], i, min(x[[i]][!out]))
+        segments(i, box[2], i, max(x[[i]][!out]))
+        if (sum(out) > 0) {
+          if (lens[i] < cuts[2]) {
             points(rep(i, sum(out)) + rnorm(sum(out), 0, .05), x[[i]][out])
+          } else {
+            segments(i, min(x[[i]][!out]), i, min(x[[i]]), lty=2)
+            segments(i, max(x[[i]][!out]), i, max(x[[i]]), lty=2)
           }
-        } else {
-          segments(i, box[1], i, min(x[[i]]))
-          segments(i, box[2], i, max(x[[i]]))
         }
       }
     }
