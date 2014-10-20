@@ -21,7 +21,7 @@ sboxplot <- function(x, ...) {
         polygon(i + c(-.1,-.1,.1,.1), c(box, rev(box)))
         segments(i - .1, med, i + .1, med, lwd=3)
         iqr <- diff(box)
-        out <- box[1] - x[[i]] > iqr | x[[i]] - box[2] > iqr
+        out <- box[1] - x[[i]] > 1.5 * iqr | x[[i]] - box[2] > 1.5 * iqr
         segments(i, box[1], i, min(x[[i]][!out]))
         segments(i, box[2], i, max(x[[i]][!out]))
         if (sum(out) > 0) {
