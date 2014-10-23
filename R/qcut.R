@@ -1,3 +1,6 @@
 qcut <- function(x, n, ...) {
-  cut(x, quantile(x, c( min(x) - 1, ( 0:(n - 3) )/( n - 3 ), max(x) + 1)), ...)
+  qs <- quantile(x, (0:n)/n)
+  qs[1] <- qs[1] - 1
+  qs[length(qs)] <- qs[length(qs)] + 1
+  cut(x, qs, ...)
 }
