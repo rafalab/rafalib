@@ -1,3 +1,23 @@
+#' smart histogram
+#'
+#' a smooth histogram with unit indicator (we're simply scaling the kernel density estimate)
+#'
+#' @param z the data
+#' @param unit the unit which determines the y axis scaling and is drawn
+#' @param bw arguments to density
+#' @param n arguments to density
+#' @param from arguments to density
+#' @param to arguments to density
+#' @param ... arguments to lines
+#'
+#' @examples
+#'
+#' set.seed(1)
+#' x = rnorm(50)
+#' par(mfrow=c(2,1))
+#' hist(x, breaks=-5:5)
+#' shist(x, unit=1, xlim=c(-5,5))
+#' 
 shist <- function(z, unit,
                   bw="nrd0", n, from, to,
                   plotHist = FALSE, add = FALSE,

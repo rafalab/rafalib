@@ -1,3 +1,13 @@
+#' smart boxplot
+#'
+#' draws points or boxes depending on sample size
+#'
+#' @param x a named list of numeric vectors
+#'
+#' @examples
+#'
+#' sboxplot(list(a=rnorm(15),b=rnorm(75),c=rnorm(10000)))
+#'
 sboxplot <- function(x, ...) {
   cuts <- c(20, 100)
   lens <- sapply(x, length)
