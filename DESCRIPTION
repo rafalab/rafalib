@@ -1,11 +1,12 @@
 Package: rafalib
 Version: 0.0.8
 Title: Convenience functions used by Rafa
-Description: A series of shortcuts for routine tasks 
+Description: A series of shortcuts for routine tasks
 Author: Rafael A. Irizarry, Mike Love
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
-Depends: RColorBrewer
-Suggests:
-Imports: RColorBrewer
+Depends:
+    RColorBrewer
+Imports:
+    RColorBrewer
 License: Artistic-2.0
 LazyData: yes
