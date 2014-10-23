@@ -8,15 +8,4 @@ Depends: RColorBrewer
 Suggests:
 Imports: RColorBrewer
 License: Artistic-2.0
-Collate: mypar.R
-	splitit.R
-	as.fumeric.R
-	shist.R
-	splot.R
-	maplot.R
-	myBiocLite.R
-	myplclust.R
-	getCelfileDates.R
-	sboxplot.R
-	qcut.R
 LazyData: yes
