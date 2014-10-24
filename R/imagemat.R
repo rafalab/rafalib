@@ -5,6 +5,7 @@
 #'
 #' @param x the matrix
 #' @param col the colors
+#' @param las as in par
 #' @param ... arguments passed to image
 #'
 #' @examples
@@ -18,6 +19,6 @@
 #'
 #' imagemat(x)
 #'
-imagemat <- function(x,col=colorRampPalette(c("white","black"))(9),...) {
-  image(1:ncol(x),1:nrow(x),t(x[nrow(x):1,]),col=col,xlab="",ylab="")
+imagemat <- function(x,col=colorRampPalette(c("white","black"))(9),las=1,...) {
+  image(1:ncol(x),1:nrow(x),t(x),col=col,xlab="",ylab="",ylim=c(nrow(x)+.5,1),las=las,...)
 }

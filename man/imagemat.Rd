@@ -3,12 +3,14 @@
 \alias{imagemat}
 \title{image of a matrix}
 \usage{
-imagemat(x, col = colorRampPalette(c("white", "black"))(9), ...)
+imagemat(x, col = colorRampPalette(c("white", "black"))(9), las = 1, ...)
 }
 \arguments{
 \item{x}{the matrix}
 
 \item{col}{the colors}
+
+\item{las}{as in par}
 
 \item{...}{arguments passed to image}
 }
