@@ -21,4 +21,7 @@ quantile cut
 \examples{
 qcut(rnorm(10), 4)
 }
+\seealso{
+\code{\link[classInt]{classIntervals}} from the classInt package
+}
 
