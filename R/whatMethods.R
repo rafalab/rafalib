@@ -23,8 +23,12 @@
 #' whatMethods(fit)
 #'
 whatMethods <- function(object) {
-  cl <- if (is.character(object)) object else class(object)
-  if (!isS4(object)) stop("only works for S4 classes")
+  cl <- if (is.character(object)) {
+    object
+  } else {
+    if (!isS4(object)) stop("only works for S4 classes")
+    class(object)
+  }
   classInSig <- function(g, where, cl) {
     cl %in% unique(unlist(findMethods(g, where)@signatures))
   }
