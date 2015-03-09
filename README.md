@@ -1,3 +1,10 @@
+# installation
+
+```
+library(devtools) # get from CRAN with install.packages("devtools")
+install_github("ririzarr/rafalib")
+```
+
 # example images
 
 * imagesort() https://twitter.com/mikelove/status/525683889273331712/photo/1
