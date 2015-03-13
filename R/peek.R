@@ -5,4 +5,4 @@
 #' @param x a filename
 #' @param n the number of lines to return
 #' 
-peek <- function(x,n) scan(x,what="char",n=n,sep="\n")
+peek <- function(x,n=2) scan(x,what="char",n=n,sep="\n")

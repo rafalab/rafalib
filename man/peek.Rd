@@ -4,7 +4,7 @@
 \alias{peek}
 \title{peek at the top of a text file}
 \usage{
-peek(x, n)
+peek(x, n = 2)
 }
 \arguments{
 \item{x}{a filename}
