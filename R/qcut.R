@@ -5,7 +5,8 @@
 #' @return a factor with n levels, from cutting x into quantiles
 #' (0/n, 1/n, 2/n, ..., 1) of x. the first and last quantile have
 #' 1 subtracted and added respectively so all data falls into the bins.
-#' @seealso \code{\link[classInt]{classIntervals}} from the classInt package
+#' @seealso \code{\link[lsr]{quantileCut}} from the lsr package and
+#' \code{\link[classInt]{classIntervals}} from the classInt package
 #' @examples
 #'
 #' qcut(rnorm(10), 4)
