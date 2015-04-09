@@ -12,7 +12,7 @@ largeobj(n = 5, units = "Mb")
 \item{units}{units to display, see \code{?object.size}}
 }
 \value{
-a character string of the 'n' largest objects
+a named character string of the size of the 'n' largest objects
 }
 \description{
 What are the largest objects in memory?
