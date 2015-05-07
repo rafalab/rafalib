@@ -20,5 +20,5 @@
 #' imagemat(x)
 #'
 imagemat <- function(x,col=colorRampPalette(c("white","black"))(9),las=1,xlab="",ylab="",...) {
-  image(1:ncol(x),1:nrow(x),t(x),col=col,ylim=c(nrow(x)+.5,.5),las=las,...)
+  image(1:ncol(x),1:nrow(x),t(x),col=col,ylim=c(nrow(x)+.5,.5),las=las,xlab=xlab,ylab=ylab,...)
 }
