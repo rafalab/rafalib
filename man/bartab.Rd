@@ -4,7 +4,7 @@
 \alias{bartab}
 \title{bartab}
 \usage{
-bartab(x, y, z, names, ...)
+bartab(x, y, z, names, skipNone = FALSE, ...)
 }
 \arguments{
 \item{x}{logical}
@@ -14,6 +14,8 @@ bartab(x, y, z, names, ...)
 \item{z}{logical}
 
 \item{names}{a character vector of length 3}
+
+\item{skipNone}{remove the "none" group}
 
 \item{...}{to barplot}
 }
