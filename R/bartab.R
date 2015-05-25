@@ -9,6 +9,9 @@
 #' @param ... to barplot
 #' 
 bartab <- function(x,y,z,names,...) {
+  x <- factor(x,c("FALSE","TRUE"))
+  y <- factor(y,c("FALSE","TRUE"))
+  z <- factor(z,c("FALSE","TRUE"))
   tabs <- as.vector(table(x, y, z))
   names(tabs) <- c("none",names[1],names[2],paste(names[1:2],collapse="+"),
                    names[3],paste(names[c(1,3)],collapse="+"),
