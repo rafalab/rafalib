@@ -1,12 +1,17 @@
-#' as factor then numeric
+#' converts to factor and then numeric
 #'
-#' converts to factors then to numeric
-#'
-#' @param x any vector
-#' @param levels optional
-#'
-#' @examples
-#'
-#' as.fumeric(c("a","x","x","y"))
+#' Converts a vector of characters into factors and then converts these into numeric. 
 #' 
-as.fumeric <- function(x,levels=unique(x)) as.numeric(factor(x,levels=levels))
+#' @param x a character vector
+#' @param levels the leves to be used in the call to factor
+#' 
+#' 
+#' @examples
+#' 
+#' group = c("a","a","b","b")
+#' plot(seq_along(group),col=as.fumeric(group))
+#' 
+as.fumeric <- function(x,levels=unique(x)) {
+  if(!is.character(x)) stop("'x' must be a character")
+  as.numeric(factor(x,levels=levels))
+}

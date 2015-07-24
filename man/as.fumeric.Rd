@@ -2,19 +2,20 @@
 % Please edit documentation in R/as.fumeric.R
 \name{as.fumeric}
 \alias{as.fumeric}
-\title{as factor then numeric}
+\title{converts to factor and then numeric}
 \usage{
 as.fumeric(x, levels = unique(x))
 }
 \arguments{
-\item{x}{any vector}
+\item{x}{a character vector}
 
-\item{levels}{optional}
+\item{levels}{the leves to be used in the call to factor}
 }
 \description{
-converts to factors then to numeric
+Converts a vector of characters into factors and then converts these into numeric.
 }
 \examples{
-as.fumeric(c("a","x","x","y"))
+group = c("a","a","b","b")
+plot(seq_along(group),col=as.fumeric(group))
 }
 
