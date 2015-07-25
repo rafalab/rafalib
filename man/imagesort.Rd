@@ -21,4 +21,7 @@ the second column has 4 blocks, etc. see example("imagesort")
 x <- replicate(4,sample(0:1,40,TRUE))
 imagesort(x)
 }
+\author{
+Michael I. Love
+}
 

@@ -1,13 +1,15 @@
 #' image of a matrix
 #'
-#' produces an image of a matrix which matches
-#' the natural orientation
+#' Produces an image of a matrix which matches
+#' the natural orientation.
 #'
 #' @param x the matrix
 #' @param col the colors
 #' @param las as in par
 #' @param ... arguments passed to image
 #'
+#' @author Michael I. Love
+#' 
 #' @examples
 #'
 #' x <- matrix(c(1,0,0,0,1,

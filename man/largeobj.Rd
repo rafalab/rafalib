@@ -15,6 +15,9 @@ largeobj(n = 5, units = "Mb")
 a named character string of the size of the 'n' largest objects
 }
 \description{
-What are the largest objects in memory?
+This function lists all the objects in the global environmnet and lists the \code{n} largest.
+}
+\author{
+Michael I. Love
 }
 

@@ -17,8 +17,8 @@ imagemat(x, col = colorRampPalette(c("white", "black"))(9), las = 1,
 \item{...}{arguments passed to image}
 }
 \description{
-produces an image of a matrix which matches
-the natural orientation
+Produces an image of a matrix which matches
+the natural orientation.
 }
 \examples{
 x <- matrix(c(1,0,0,0,1,
@@ -29,5 +29,8 @@ x <- matrix(c(1,0,0,0,1,
 ncol=5,byrow=TRUE)
 
 imagemat(x)
+}
+\author{
+Michael I. Love
 }
 

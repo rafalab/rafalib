@@ -1,13 +1,14 @@
 #' bartab
 #'
-#' plot the overlap of three groups with a barplot
+#' Plot the overlap of three groups with a barplot
 #'
 #' @param x logical
 #' @param y logical
 #' @param z logical
 #' @param names a character vector of length 3
 #' @param skipNone remove the "none" group
-#' @param ... to barplot
+#' @param ... further arguments passed on to \code{\link{barplot}}
+#' @author Michael I. Love
 #' 
 bartab <- function(x,y,z,names,skipNone=FALSE,...) {
   x <- factor(x,c("FALSE","TRUE"))

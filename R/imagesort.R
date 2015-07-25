@@ -7,6 +7,8 @@
 #' @param col the colors of 0 and 1
 #' @param ... arguments to heatmap
 #' 
+#' @author Michael I. Love
+#' 
 #' @examples
 #'
 #' x <- replicate(4,sample(0:1,40,TRUE))

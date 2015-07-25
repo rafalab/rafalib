@@ -18,4 +18,7 @@ Converts a vector of characters into factors and then converts these into numeri
 group = c("a","a","b","b")
 plot(seq_along(group),col=as.fumeric(group))
 }
+\author{
+Rafael A. Irizarry
+}
 

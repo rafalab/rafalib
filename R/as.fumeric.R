@@ -5,7 +5,8 @@
 #' @param x a character vector
 #' @param levels the leves to be used in the call to factor
 #' 
-#' 
+#' @author Rafael A. Irizarry
+#'  
 #' @examples
 #' 
 #' group = c("a","a","b","b")

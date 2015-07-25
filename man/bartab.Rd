@@ -17,9 +17,12 @@ bartab(x, y, z, names, skipNone = FALSE, ...)
 
 \item{skipNone}{remove the "none" group}
 
-\item{...}{to barplot}
+\item{...}{further arguments passed on to \code{\link{barplot}}}
 }
 \description{
-plot the overlap of three groups with a barplot
+Plot the overlap of three groups with a barplot
+}
+\author{
+Michael I. Love
 }
 
