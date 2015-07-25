@@ -1,8 +1,8 @@
-#' MA plot aka Bland Altman plot
+#' Bland Altman plot aka MA plot
 #'
-#' Takes two vectors \code{x} and \code{y} and plots 
-#' \code{M}=\code{y}-\code{x} versus \code{A}=(\code{x}+\code{y})/2. 
-#' If the vectors a more longer than length \code{n} the data is sampled to size \code{n}. 
+#' Takes two vectors x and y and plots 
+#' M=y-x versus A=(x+y)/2. 
+#' If the vectors a more longer than length n the data is sampled to size n. 
 #' A smooth curve is added to show trends.
 #' 
 #' @param x a numeric vector
