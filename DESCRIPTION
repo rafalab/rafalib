@@ -1,5 +1,5 @@
 Package: rafalib
-Version: 1.0.0
+Version: 0.9.0
 Title: Convenience functions for routine data exploration tasks  
 Description: A series of shortcuts for routine tasks originally developed by Rafael A. Irizarry to facilitate data exploration. 
 Author: Rafael A. Irizarry and Michael I. Love
