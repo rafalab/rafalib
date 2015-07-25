@@ -7,7 +7,8 @@
 #' 
 #' @author Rafael A. Irizarry
 #' 
-#' @details Note that once you run this function in session, 
+#' @details Note that once you run this function in a session, you no
+#' longer need to call since 
 #' you can call \code{biocLite} directly.
 #' 
 install_bioc <- function(...){

@@ -1,4 +1,4 @@
-#' MA plot aka Bland–Altman plot
+#' MA plot aka Bland Altman plot
 #'
 #' Takes two vectors \code{x} and \code{y} and plots 
 #' \code{M}=\code{y}-\code{x} versus \code{A}=(\code{x}+\code{y})/2. 
@@ -8,11 +8,13 @@
 #' @param x a numeric vector
 #' @param y a numeric vector
 #' @param n a numeric value. If \code{length(x)} is larger than \code{n}, the \code{x} and \code{y} are sampled down.
+#' @param subset index of the points to be plotted 
 #' @param xlab a title for the x axis
 #' @param ylab a title for the y axis
 #' @param curve.add if \code{TRUE} a smooth curve is fit to the data and displayed. The function \code{\link{loess}} is used to fit the curve.
 #' @param curve.col a numeric value that determines the color of the smooth curve
 #' @param curve.span is passed on to \code{\link{loess}} as the \code{span} argument
+#' @param curve.lwd the line width for the smooth curve
 #' @param curve.n a numeric value that determines the sample size used to fit the curve. This makes fitting the curve faster with large datasets
 #' @param ... further arguments passed to \code{\link{plot}}
 #' 

@@ -27,6 +27,9 @@ nLL <- function(lambda) - sum(dpois(y, lambda, log = TRUE))
 fit <- mle(nLL, start = list(lambda = 5), nobs = length(y))
 whatMethods(fit)
 }
+\author{
+Michael I. Love
+}
 \references{
 the bulk of this code was found with help from Gabe Becker within
 \code{promptClass}

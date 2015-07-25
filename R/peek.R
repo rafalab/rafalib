@@ -5,4 +5,6 @@
 #' @param x a filename
 #' @param n the number of lines to return
 #' 
+#' @author Michael I. Love
+#' 
 peek <- function(x,n=2) scan(x,what="char",n=n,sep="\n")

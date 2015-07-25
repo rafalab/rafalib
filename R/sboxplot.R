@@ -3,7 +3,7 @@
 #' draws points or boxes depending on sample size
 #'
 #' @param x a named list of numeric vectors
-#'
+#' @param ... further arguments passed on to \code{\link{boxplot}}
 #' @examples
 #'
 #' sboxplot(list(a=rnorm(15),b=rnorm(75),c=rnorm(10000)))

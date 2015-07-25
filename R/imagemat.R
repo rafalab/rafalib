@@ -6,6 +6,8 @@
 #' @param x the matrix
 #' @param col the colors
 #' @param las as in par
+#' @param xlab x-axis title
+#' @param ylab y-axis title
 #' @param ... arguments passed to image
 #'
 #' @author Michael I. Love

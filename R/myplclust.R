@@ -1,3 +1,16 @@
+#' plclust in colour
+#' 
+#' Modifiction of plclust for plotting hclust objects in *in colour*!
+#' 
+#' @param hclust hclust object
+#' @param labels a character vector of labels of the leaves of the tree
+#' @param lab.col colour for the labels; NA=default device foreground colour
+#' @param hang as in \code{\link{hclust}} & \code{\link{plclust}}
+#' @param xlab title for x-axis (defaults to no title)
+#' @param sub subtitle (defualts to no subtitle)
+#' @param ... further arguments passed to \code{\link{plot}}
+#' @author Eva KF Chan
+#' 
 myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust$labels)), hang=0.1, xlab="", sub="", ...){
  ## modifiction of plclust for plotting hclust objects *in colour*!
  ## Copyright Eva KF Chan 2009

@@ -14,6 +14,10 @@ imagemat(x, col = colorRampPalette(c("white", "black"))(9), las = 1,
 
 \item{las}{as in par}
 
+\item{xlab}{x-axis title}
+
+\item{ylab}{y-axis title}
+
 \item{...}{arguments passed to image}
 }
 \description{

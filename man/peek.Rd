@@ -14,4 +14,7 @@ peek(x, n = 2)
 \description{
 this returns a character vector which shows the top n lines of a file
 }
+\author{
+Michael I. Love
+}
 

@@ -10,6 +10,8 @@ qcut(x, n, ...)
 \item{x}{a numeric vector}
 
 \item{n}{the number of quantiles}
+
+\item{...}{further arguments passed on to \code{\link{cut}}}
 }
 \value{
 a factor with n levels, from cutting x into quantiles
@@ -17,7 +19,7 @@ a factor with n levels, from cutting x into quantiles
 1 subtracted and added respectively so all data falls into the bins.
 }
 \description{
-quantile cut
+\code{qcut} calls \code{\link{cut}} with the quantiles of \code{x} as breaks.
 }
 \examples{
 qcut(rnorm(10), 4)

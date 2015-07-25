@@ -13,10 +13,18 @@ splot(x, y, n = 10000, subset = NULL, xlab = NULL, ylab = NULL, ...)
 
 \item{n}{the number to subset}
 
-\item{subset}{explicit subset index (optional)}
+\item{subset}{explicit subset index (optional).}
+
+\item{xlab}{title for the x-axis}
+
+\item{ylab}{title for the y-axis}
+
+\item{...}{further parameters passed on to \code{plot}}
 }
 \description{
-if n > 10,000, make a random subset of 10,000 and plot
+if n > 10,000, make a random subset of 10,000 and plot. You can also specify
+a specific subset to plot. If length of subset is larger
+than \code{n}, a random sample is still used to reduce data size.
 }
 \examples{
 x <- rnorm(1e5)

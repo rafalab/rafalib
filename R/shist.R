@@ -1,6 +1,12 @@
-#' smart histogram
+#' smooth histogram
 #'
-#' a smooth histogram with unit indicator (we're simply scaling the kernel density estimate)
+#' a smooth histogram with unit indicator
+#' (we're simply scaling the kernel density estimate). The advantage of this plot
+#' is its interpretability since the height of the curve represents the 
+#' frequency of a interval of size \code{unit} around the point in question. 
+#' Another advantage is that if \code{z} is a matrix, curves are plotted 
+#' together.
+#'   
 #'
 #' @param z the data
 #' @param unit the unit which determines the y axis scaling and is drawn
@@ -8,6 +14,13 @@
 #' @param n arguments to density
 #' @param from arguments to density
 #' @param to arguments to density
+#' @param plotHist a logical: should an actual histogram be drawn under curve?
+#' @param add a logical: add should the curve be added to existing plot?
+#' @param xlab x-axis title, defaults to no title
+#' @param ylab y-axis title, defaults to no title
+#' @param xlim range of the x-axis
+#' @param ylim range of the y-axis
+#' @param main an overall title for the plot: see \code{\link{title}}.
 #' @param ... arguments to lines
 #'
 #' @examples

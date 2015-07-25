@@ -8,6 +8,8 @@ sboxplot(x, ...)
 }
 \arguments{
 \item{x}{a named list of numeric vectors}
+
+\item{...}{further arguments passed on to \code{\link{boxplot}}}
 }
 \description{
 draws points or boxes depending on sample size

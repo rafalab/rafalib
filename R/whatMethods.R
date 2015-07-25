@@ -22,6 +22,8 @@
 #' fit <- mle(nLL, start = list(lambda = 5), nobs = length(y))
 #' whatMethods(fit)
 #'
+#' @author Michael I. Love
+#' 
 whatMethods <- function(object) {
   cl <- if (is.character(object)) {
     object

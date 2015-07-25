@@ -1,7 +1,10 @@
 #' quantile cut
 #'
+#' \code{qcut} calls \code{\link{cut}} with the quantiles of \code{x} as breaks.
+#'
 #' @param x a numeric vector
 #' @param n the number of quantiles 
+#' @param ... further arguments passed on to \code{\link{cut}}
 #' @return a factor with n levels, from cutting x into quantiles
 #' (0/n, 1/n, 2/n, ..., 1) of x. the first and last quantile have
 #' 1 subtracted and added respectively so all data falls into the bins.
