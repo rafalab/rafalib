@@ -1,3 +1,11 @@
 importFrom(RColorBrewer, brewer.pal)
+importFrom("grDevices", "colorRampPalette", "palette")
+importFrom("graphics", "arrows", "axis", "barplot", "boxplot", "hist",
+           "image", "lines", "par", "plot", "points", "polygon",
+           "segments", "stripchart", "text")
+importFrom("stats", "as.dendrogram", "density", "dist", "hclust",
+           "heatmap", "loess", "median", "quantile", "rnorm", "sd",
+           "var")
+importFrom("utils", "head", "object.size")
 
 exportPattern("^[^\\.]")
