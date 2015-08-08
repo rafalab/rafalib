@@ -13,6 +13,8 @@ utils::globalVariables("biocLite")
 #' you can call \code{biocLite} directly.
 #' 
 #' 
+#' @examples
+#' install_bioc("affy")
 install_bioc <- function(...){
     internet <- try(source("http://bioconductor.org/biocLite.R"), silent=TRUE) 
     if(!class(internet)=="try-error") 

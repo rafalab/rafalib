@@ -8,6 +8,13 @@
 #' @return a named character string of the size of the 'n' largest objects
 #' 
 #' @author Michael I. Love
+#' 
+#' @examples
+#' x<-rnorm(10^5)
+#' y<-rnorm(10^6)
+#' z<-rnorm(2*10^6)
+#' w<-rnorm(3*10^6)
+#' largeobj(n=3)
 
 largeobj <- function(n=5, units="Mb") {
   objs <- sapply(ls(envir=.GlobalEnv), function(x) object.size(get(x)))
