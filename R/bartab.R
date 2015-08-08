@@ -10,6 +10,15 @@
 #' @param ... further arguments passed on to \code{\link{barplot}}
 #' @author Michael I. Love
 #' 
+#' @examples
+#' 
+#' set.seed(1)
+#' x <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+#' y <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+#' z <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+#' bartab(x,y,z,c("X","Y","Z"))
+#' 
+#' 
 bartab <- function(x,y,z,names,skipNone=FALSE,...) {
   x <- factor(x,c("FALSE","TRUE"))
   y <- factor(y,c("FALSE","TRUE"))
