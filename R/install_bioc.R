@@ -1,3 +1,4 @@
+utils::globalVariables("biocLite")
 #' Install or update Bioconductor and CRAN packages
 #' 
 #' This is function simply a wrapper for \code{biocLite}. It first sources the code 
@@ -10,6 +11,7 @@
 #' @details Note that once you run this function in a session, you no
 #' longer need to call since 
 #' you can call \code{biocLite} directly.
+#' 
 #' 
 install_bioc <- function(...){
     internet <- try(source("http://bioconductor.org/biocLite.R"), silent=TRUE) 
