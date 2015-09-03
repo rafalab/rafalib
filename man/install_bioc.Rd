@@ -18,6 +18,9 @@ Note that once you run this function in a session, you no
 longer need to call since
 you can call \code{biocLite} directly.
 }
+\examples{
+install_bioc("affy")
+}
 \author{
 Rafael A. Irizarry
 }

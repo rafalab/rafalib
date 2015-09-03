@@ -17,4 +17,9 @@ the unbiased sample estimate of the population varaince.
 It simply multiplies the result of \code{\link{var}} by (n-1)  / n with n
 the populaton size.
 }
+\examples{
+x <- c(0,1) ##variance should be 0.5^2=0.25
+var(x)
+popvar(x)
+}
 

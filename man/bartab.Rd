@@ -22,6 +22,13 @@ bartab(x, y, z, names, skipNone = FALSE, ...)
 \description{
 Plot the overlap of three groups with a barplot
 }
+\examples{
+set.seed(1)
+x <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+y <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+z <- sample(c(FALSE,TRUE), 10, replace=TRUE)
+bartab(x,y,z,c("X","Y","Z"))
+}
 \author{
 Michael I. Love
 }

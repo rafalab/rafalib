@@ -25,6 +25,11 @@ myplclust(hclust, labels = hclust$labels, lab.col = rep(1,
 \description{
 Modifiction of plclust for plotting hclust objects in *in colour*!
 }
+\examples{
+data(iris)
+hc <- hclust( dist(iris[,1:4]) )
+myplclust(hc, labels=iris$Species,lab.col=as.numeric(iris$Species))
+}
 \author{
 Eva KF Chan
 }
