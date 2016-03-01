@@ -17,8 +17,10 @@
 #' largeobj(n=3)
 
 largeobj <- function(n=5, units="Mb") {
-  objs <- sapply(ls(envir=.GlobalEnv), function(x) object.size(get(x)))
+  # use 'aaa' here in anonymous function because there seems
+  # to be an issue with actual objects named same as the anon fn's argument
+  objs <- sapply(ls(envir=.GlobalEnv), function(aaa) object.size(get(aaa)))
   o <- order(objs, decreasing=TRUE)
-  out <- sapply(ls(envir=.GlobalEnv), function(x) format(object.size(get(x)),units=units))
+  out <- sapply(ls(envir=.GlobalEnv), function(aaa) format(object.size(get(aaa)),units=units))
   head(out[o], n=n)
 }
