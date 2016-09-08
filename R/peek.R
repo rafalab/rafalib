@@ -16,4 +16,7 @@
 #' colnames(x)=letters[1:10]
 #' write.csv(x,file=filename,row.names=FALSE)
 #' peek(filename)
+#' peek2(filename)
 peek <- function(x,n=2) scan(x,what="char",n=n,sep="\n")
+peek2 <- function(x, n=2) system(paste('head ', x, ' --lines=', n, sep=""))
+
