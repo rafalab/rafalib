@@ -35,4 +35,3 @@ myplclust(hc, labels=iris$Species,lab.col=as.numeric(iris$Species))
 \author{
 Eva KF Chan
 }
-

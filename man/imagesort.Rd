@@ -26,4 +26,3 @@ imagesort(x)
 \author{
 Michael I. Love
 }
-

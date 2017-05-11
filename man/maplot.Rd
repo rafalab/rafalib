@@ -50,4 +50,3 @@ maplot(x,y)
 \author{
 Rafael A. Irizarry
 }
-

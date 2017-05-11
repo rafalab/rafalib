@@ -27,4 +27,3 @@ largeobj(n=3)
 \author{
 Michael I. Love
 }
-

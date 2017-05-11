@@ -35,4 +35,3 @@ bartab(x,y,z,c("X","Y","Z"))
 \author{
 Michael I. Love
 }
-

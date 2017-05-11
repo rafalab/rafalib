@@ -17,4 +17,3 @@ the unbiased sample estimate of the population varaince.
 It simply multiplies the result of \code{\link{var}} by (n-1)  / n with n 
 the populaton size and takes the square root.
 }
-

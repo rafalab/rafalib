@@ -9,4 +9,4 @@ Imports:
     RColorBrewer
 License: Artistic-2.0
 LazyData: yes
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

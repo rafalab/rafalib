@@ -16,4 +16,3 @@ Creates an list of indexes for each unique entry of \code{x}
 x <- c("a","a","b","a","b","c","b","b")
 splitit(x)
 }
-

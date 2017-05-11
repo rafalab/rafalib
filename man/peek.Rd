@@ -27,4 +27,3 @@ peek(filename)
 \author{
 Michael I. Love
 }
-

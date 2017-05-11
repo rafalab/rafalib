@@ -39,4 +39,3 @@ imagemat(x)
 \author{
 Michael I. Love
 }
-

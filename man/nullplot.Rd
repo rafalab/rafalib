@@ -27,4 +27,3 @@ Make an plot with nothing in it
 \examples{
 nullplot()
 }
-

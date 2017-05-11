@@ -19,4 +19,3 @@ draws points or boxes depending on sample size
 sboxplot(list(a=rnorm(15),b=rnorm(75),c=rnorm(10000)))
 
 }
-

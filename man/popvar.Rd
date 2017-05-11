@@ -22,4 +22,3 @@ x <- c(0,1) ##variance should be 0.5^2=0.25
 var(x) 
 popvar(x)
 }
-

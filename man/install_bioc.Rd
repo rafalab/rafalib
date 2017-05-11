@@ -24,4 +24,3 @@ install_bioc("affy")
 \author{
 Rafael A. Irizarry
 }
-

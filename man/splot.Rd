@@ -33,4 +33,3 @@ y <- rnorm(1e5)
 splot(x,y,pch=16,col=rgb(0,0,0,.25))
 
 }
-

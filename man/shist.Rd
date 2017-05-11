@@ -53,4 +53,3 @@ hist(x, breaks=-5:5)
 shist(x, unit=1, xlim=c(-5,5))
 
 }
-
