@@ -2,10 +2,12 @@ importFrom(RColorBrewer, brewer.pal)
 importFrom("grDevices", "colorRampPalette", "palette")
 importFrom("graphics", "arrows", "axis", "barplot", "boxplot", "hist",
            "image", "lines", "par", "plot", "points", "polygon",
-           "segments", "stripchart", "text")
+           "segments", "stripchart", "text", "abline")
 importFrom("stats", "as.dendrogram", "density", "dist", "hclust",
            "heatmap", "loess", "median", "quantile", "rnorm", "sd",
-           "var")
+           "var", "terms.formula", "coef", "formula")
 importFrom("utils", "head", "object.size")
+importFrom("SummarizedExperiment", "colData")
+importFrom("DESeq2", "design", "plotCounts")
 
 exportPattern("^[^\\.]")
