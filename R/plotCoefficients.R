@@ -10,7 +10,7 @@
 #' 
 #' @examples
 #' 
-#' libray(DESeq2)
+#' library(DESeq2)
 #' dds <-  dds <- makeExampleDESeqDataSet()
 #' dds = DESeq(dds)
 #' plotCoefficients(dds, "gene930")
@@ -22,58 +22,7 @@ plotCoefficients <- function(dds, geneName, legend=TRUE){
   # intgrp = expanded list of elements from the design
   # coefs = coefficients from dds
   
-  # only for internal usage
-  findplotParameters <- function(bp_names,dds,intgrp, coefs){
-    arrowCount = rep(0,length(bp_names))
-    ylim1 = min(0,coefs[[1]])
-    ylim2 = max(0,coefs[[1]])
-    arrowCount[1] = 1
-    for (colIdx in 2:length(bp_names)){
-      fctLevels = strsplit(bp_names[colIdx],"\\.")[[1]] # actual elements of the factor
-      rIdx = 1 # index in which factor is being looked at
-      baseLine = coefs[["Intercept"]]
-      #non interaction terms
-      coefIdx = rep(1, length(fctLevels))
-      for(fctIdx in 1:length(fctLevels)){
-        lIdx = which(levels(dds@colData@listData[[intgrp[rIdx]]]) == fctLevels[fctIdx])
-        coefIdx[fctIdx] = lIdx
-        if(lIdx>1){ #need to print arrow
-          coefName = paste(intgrp[rIdx], fctLevels[fctIdx],"vs", levels(dds@colData@listData[[intgrp[rIdx]]])[1], sep = "_")
-          baseLine = baseLine + coefs[[coefName]]
-          ylim1 = min(ylim1, baseLine)
-          ylim2 = max(ylim2, baseLine)
-          arrowCount[colIdx] = arrowCount[colIdx] + 1
-        }
-        # interaction terms (only the case if min 2 are not reference)
-        if(sum(coefIdx>1)>1){
-          # check if current is part of the factors 
-          # since interactions are build by concatenating the strings we can do the following:
-          interName1 = paste0(intgrp[rIdx], fctLevels[fctIdx])
-          interName1Pos = grep(interName1, colnames(coefs))
-          if(length(interName1Pos) > 0) {
-            interName2 = gsub(interName1, "", colnames(coefs)[interName1Pos])
-            interName2 = gsub("\\.", "", interName2)
-            coefName = ""
-            for(fctIdx2 in 1:length(fctLevels)){
-              if(grep(fctLevels[fctIdx],bp_names[colIdx])>0 & coefIdx[fctIdx2]>1){ # needs to be in the name of column we are working on & not reference
-                coefName = paste(coefName, paste0(intgrp[fctIdx2], fctLevels[fctIdx2]), sep = ".")
-              }
-            }
-            coefName = substring(coefName, 2) # remove the first "."
-            baseLine = baseLine + coefs[[coefName]]
-            ylim1 = min(ylim1, baseLine)
-            ylim2 = max(ylim2, baseLine)
-            arrowCount[colIdx] = arrowCount[colIdx] + 1
-          }
-        }
-        rIdx = rIdx + 1
-      }
-    }
-    if(baseLine > ylim2/2){legendPos = "bottomright"}else{legendPos = "topright"}
-    return(list(c(floor(ylim1), ceiling(ylim2)), arrowCount, legendPos))
-  }# end of findplotParameters()
-  
-  
+ 
   if(!class(dds)=="DESeqDataSet"){
     warning("dds is not of class DESeqDataSet")
   }
@@ -120,7 +69,7 @@ plotCoefficients <- function(dds, geneName, legend=TRUE){
   
   
   # calculate some values for defining the plot
-  coldat = DESeq2::colData(dds)
+  coldat = colData(dds)
   xlim = 1
   for (idx in 1: length(intgrpNoInt)){
     xlim = xlim * length(levels(coldat[,intgrpNoInt[idx]]))
@@ -133,7 +82,7 @@ plotCoefficients <- function(dds, geneName, legend=TRUE){
   bp_names = bp$names
   
   # find ylim and number of arrow to plot per slot
-  plotParameters = findplotParameters(bp_names, dds, intgrpNoInt, coefs)
+  plotParameters = ._findplotParameters(bp_names, dds, intgrpNoInt, coefs)
   ylim = plotParameters[[1]]
   arrowCount = plotParameters[[2]]
   legendPos = plotParameters[[3]]
@@ -200,4 +149,55 @@ plotCoefficients <- function(dds, geneName, legend=TRUE){
            merge = F)
   }
 }
+
+# only for internal usage
+._findplotParameters <- function(bp_names,dds,intgrp, coefs){
+  arrowCount = rep(0,length(bp_names))
+  ylim1 = min(0,coefs[[1]])
+  ylim2 = max(0,coefs[[1]])
+  arrowCount[1] = 1
+  for (colIdx in 2:length(bp_names)){
+    fctLevels = strsplit(bp_names[colIdx],"\\.")[[1]] # actual elements of the factor
+    rIdx = 1 # index in which factor is being looked at
+    baseLine = coefs[["Intercept"]]
+    #non interaction terms
+    coefIdx = rep(1, length(fctLevels))
+    for(fctIdx in 1:length(fctLevels)){
+      lIdx = which(levels(dds@colData@listData[[intgrp[rIdx]]]) == fctLevels[fctIdx])
+      coefIdx[fctIdx] = lIdx
+      if(lIdx>1){ #need to print arrow
+        coefName = paste(intgrp[rIdx], fctLevels[fctIdx],"vs", levels(dds@colData@listData[[intgrp[rIdx]]])[1], sep = "_")
+        baseLine = baseLine + coefs[[coefName]]
+        ylim1 = min(ylim1, baseLine)
+        ylim2 = max(ylim2, baseLine)
+        arrowCount[colIdx] = arrowCount[colIdx] + 1
+      }
+      # interaction terms (only the case if min 2 are not reference)
+      if(sum(coefIdx>1)>1){
+        # check if current is part of the factors 
+        # since interactions are build by concatenating the strings we can do the following:
+        interName1 = paste0(intgrp[rIdx], fctLevels[fctIdx])
+        interName1Pos = grep(interName1, colnames(coefs))
+        if(length(interName1Pos) > 0) {
+          interName2 = gsub(interName1, "", colnames(coefs)[interName1Pos])
+          interName2 = gsub("\\.", "", interName2)
+          coefName = ""
+          for(fctIdx2 in 1:length(fctLevels)){
+            if(grep(fctLevels[fctIdx],bp_names[colIdx])>0 & coefIdx[fctIdx2]>1){ # needs to be in the name of column we are working on & not reference
+              coefName = paste(coefName, paste0(intgrp[fctIdx2], fctLevels[fctIdx2]), sep = ".")
+            }
+          }
+          coefName = substring(coefName, 2) # remove the first "."
+          baseLine = baseLine + coefs[[coefName]]
+          ylim1 = min(ylim1, baseLine)
+          ylim2 = max(ylim2, baseLine)
+          arrowCount[colIdx] = arrowCount[colIdx] + 1
+        }
+      }
+      rIdx = rIdx + 1
+    }
+  }
+  if(baseLine > ylim2/2){legendPos = "bottomright"}else{legendPos = "topright"}
+  return(list(c(floor(ylim1), ceiling(ylim2)), arrowCount, legendPos))
+}# end of findplotParameters()
 

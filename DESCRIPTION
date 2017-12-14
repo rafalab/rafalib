@@ -6,8 +6,9 @@ Description: A series of shortcuts for routine tasks originally developed by
 Author: Rafael A. Irizarry and Michael I. Love
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
 Imports:
-    RColorBrewer
-    DESeq2
+    RColorBrewer, 
+    DESeq2,
+    SummarizedExperiment
 License: Artistic-2.0
 LazyData: yes
 RoxygenNote: 6.0.1

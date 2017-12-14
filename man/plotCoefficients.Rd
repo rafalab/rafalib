@@ -19,6 +19,7 @@ plot coefficients of a gene given a DESeqDataSet (DESeq2 > v1.16)
 }
 \examples{
 
+library(DESeq2)
 dds <-  dds <- makeExampleDESeqDataSet()
 dds = DESeq(dds)
 plotCoefficients(dds, "gene930")

@@ -7,5 +7,7 @@ importFrom("stats", "as.dendrogram", "density", "dist", "hclust",
            "heatmap", "loess", "median", "quantile", "rnorm", "sd",
            "var", "terms.formula", "coef", "formula")
 importFrom("utils", "head", "object.size")
-importFrom("DESeq2", "design", "colData")
+importFrom("SummarizedExperiment", "colData")
+importFrom("DESeq2", "design", "plotCounts")
+
 exportPattern("^[^\\.]")
