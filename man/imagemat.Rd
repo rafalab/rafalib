@@ -4,8 +4,14 @@
 \alias{imagemat}
 \title{image of a matrix}
 \usage{
-imagemat(x, col = colorRampPalette(c("white", "grey50"))(9), las = 1,
-  xlab = "", ylab = "", ...)
+imagemat(
+  x,
+  col = colorRampPalette(c("white", "grey50"))(9),
+  las = 1,
+  xlab = "",
+  ylab = "",
+  ...
+)
 }
 \arguments{
 \item{x}{the matrix}

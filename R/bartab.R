@@ -18,7 +18,9 @@
 #' z <- sample(c(FALSE,TRUE), 10, replace=TRUE)
 #' bartab(x,y,z,c("X","Y","Z"))
 #' 
-#' 
+#' @importFrom graphics barplot
+#' @export
+
 bartab <- function(x,y,z,names,skipNone=FALSE,...) {
   x <- factor(x,c("FALSE","TRUE"))
   y <- factor(y,c("FALSE","TRUE"))

@@ -1,12 +1,15 @@
 Package: rafalib
-Version: 1.0.2
+Type: Package
+Version: 1.0.3
 Title: Convenience Functions for Routine Data Exploration
+Authors@R: c(person(c("Rafael", "A."), "Irizarry", email = "rafael_irizarry@dfci.harvard.edu",
+                  role = c("aut", "cre")),
+             person(c("Michael", "I."), "Love", role = "aut"))
+Depends: R (>= 3.1.2),
+Imports: RColorBrewer, 
+    BiocManager
 Description: A series of shortcuts for routine tasks originally developed by
     Rafael A. Irizarry to facilitate data exploration.
-Author: Rafael A. Irizarry and Michael I. Love
-Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
-Imports:
-    RColorBrewer
 License: Artistic-2.0
-LazyData: yes
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+RoxygenNote: 7.3.2

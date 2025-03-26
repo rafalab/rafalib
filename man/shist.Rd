@@ -4,8 +4,22 @@
 \alias{shist}
 \title{smooth histogram}
 \usage{
-shist(z, unit, bw = "nrd0", n, from, to, plotHist = FALSE, add = FALSE,
-  xlab, ylab = "Frequency", xlim, ylim, main, ...)
+shist(
+  z,
+  unit,
+  bw = "nrd0",
+  n,
+  from,
+  to,
+  plotHist = FALSE,
+  add = FALSE,
+  xlab,
+  ylab = "Frequency",
+  xlim,
+  ylim,
+  main,
+  ...
+)
 }
 \arguments{
 \item{z}{the data}

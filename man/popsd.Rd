@@ -15,5 +15,5 @@ popsd(x, na.rm = FALSE)
 Returns the population standard deviation. Note that \code{\link{sd}} returns
 the unbiased sample estimate of the population standard deviation. 
 It simply multiplies the result of \code{\link{var}} by (n-1)  / n with n 
-the populaton size and takes the square root.
+the population size and takes the square root.
 }

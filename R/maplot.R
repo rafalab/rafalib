@@ -27,6 +27,11 @@
 #' x <- signal + rnorm(n)
 #' y <- signal + bias + rnorm(n)  
 #' maplot(x,y)
+#' 
+#' @importFrom stats loess
+#' @importFrom graphics plot lines
+#' @export
+
 
 maplot <- function(x,y,n=10000,subset=NULL,xlab=NULL,ylab=NULL,
                    curve.add=TRUE,curve.col=2,curve.span=1/2,

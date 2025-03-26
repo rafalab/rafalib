@@ -7,19 +7,18 @@
 install_bioc(...)
 }
 \arguments{
-\item{...}{arguments passed on to \code{biocLite}}
+\item{...}{arguments passed on to \code{link[BiocManager]{install}}}
 }
 \description{
-This is function simply a wrapper for \code{biocLite}. It first sources the code 
-from the Bioconductor site then calls \code{biocLite}.
+This function is simply a wrapper for \code{link[BiocManager]{install}}. If \code{BiocManager} is not installed it it automatically installed.
 }
 \details{
-Note that once you run this function in a session, you no
-longer need to call since 
-you can call \code{biocLite} directly.
+If \code{BiocManager} is installed you can simply call \code{BiocManager::install} instead.
 }
 \examples{
-install_bioc("affy")
+\donttest{
+  install_bioc("affy")
+}
 }
 \author{
 Rafael A. Irizarry

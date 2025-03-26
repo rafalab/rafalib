@@ -4,8 +4,15 @@
 \alias{myplclust}
 \title{plclust in colour}
 \usage{
-myplclust(hclust, labels = hclust$labels, lab.col = rep(1,
-  length(hclust$labels)), hang = 0.1, xlab = "", sub = "", ...)
+myplclust(
+  hclust,
+  labels = hclust$labels,
+  lab.col = rep(1, length(hclust$labels)),
+  hang = 0.1,
+  xlab = "",
+  sub = "",
+  ...
+)
 }
 \arguments{
 \item{hclust}{hclust object}

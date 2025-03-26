@@ -30,7 +30,6 @@ y <- sample(c(FALSE,TRUE), 10, replace=TRUE)
 z <- sample(c(FALSE,TRUE), 10, replace=TRUE)
 bartab(x,y,z,c("X","Y","Z"))
 
-
 }
 \author{
 Michael I. Love

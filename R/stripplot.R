@@ -7,6 +7,7 @@
 #'
 #' @return a plot
 #'
+#' @importFrom graphics stripchart
 #' @export
 stripplot <- function(...) {
   stripchart(..., vertical=TRUE, pch=1, method="jitter")

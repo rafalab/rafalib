@@ -5,18 +5,27 @@
 \alias{bigpar}
 \title{mypar}
 \usage{
-mypar(a = 1, b = 1, brewer.n = 8, brewer.name = "Dark2", cex.lab = 1,
-  cex.main = 1.2, cex.axis = 1, mar = c(2.5, 2.5, 1.6, 1.1),
-  mgp = c(1.5, 0.5, 0), ...)
+mypar(
+  a = 1,
+  b = 1,
+  brewer.n = 8,
+  brewer.name = "Dark2",
+  cex.lab = 1,
+  cex.main = 1.2,
+  cex.axis = 1,
+  mar = c(2.5, 2.5, 1.6, 1.1),
+  mgp = c(1.5, 0.5, 0),
+  ...
+)
 }
 \arguments{
 \item{a}{the first entry of the vector passed to \code{mar}}
 
 \item{b}{the second entry of the vector passed to \code{mar}}
 
-\item{brewer.n}{parameter \code{n} passed to \code{\link{brewer.pal}}}
+\item{brewer.n}{parameter \code{n} passed to \code{\link[RColorBrewer]{brewer.pal}}}
 
-\item{brewer.name}{parameters \code{name} passed to \code{\link{brewer.pal}}}
+\item{brewer.name}{parameters \code{name} passed to \code{\link[RColorBrewer]{brewer.pal}}}
 
 \item{cex.lab}{passed on to \code{\link{par}}}
 

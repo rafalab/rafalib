@@ -31,6 +31,9 @@
 #' hist(x, breaks=-5:5)
 #' shist(x, unit=1, xlim=c(-5,5))
 #' 
+#' @import graphics
+#' @export
+
 shist <- function(z, unit,
                   bw="nrd0", n, from, to,
                   plotHist = FALSE, add = FALSE,

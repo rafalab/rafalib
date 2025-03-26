@@ -17,6 +17,9 @@
 #' myplclust(hc, labels=iris$Species,lab.col=as.numeric(iris$Species))
 #' 
 #' 
+#' @importFrom graphics plot text
+#' @export
+
 myplclust <- function( hclust, labels=hclust$labels, lab.col=rep(1,length(hclust$labels)), hang=0.1, xlab="", sub="", ...){
  ## modifiction of plclust for plotting hclust objects *in colour*!
  ## Copyright Eva KF Chan 2009

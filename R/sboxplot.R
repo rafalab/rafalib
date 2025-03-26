@@ -8,6 +8,10 @@
 #'
 #' sboxplot(list(a=rnorm(15),b=rnorm(75),c=rnorm(10000)))
 #'
+#' @import graphics
+#' @import stats
+#' @export
+
 sboxplot <- function(x, ...) {
   cuts <- c(20, 100)
   lens <- sapply(x, length)

@@ -14,6 +14,9 @@
 #' x <- replicate(4,sample(0:1,40,TRUE))
 #' imagesort(x)
 #' 
+#' @importFrom stats heatmap hclust
+#' @export
+
 imagesort <- function(x,col=c("white","black"),...) {
   hc <- hclust(dist(t(x)))
   y <- sweep(x,2,2^(ncol(x)-order(hc$order)),"*")

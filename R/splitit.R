@@ -7,5 +7,7 @@
 #' @examples
 #' x <- c("a","a","b","a","b","c","b","b")
 #' splitit(x)
+#' @export
+
 splitit <- function(x) split(seq(along=x),x)
 

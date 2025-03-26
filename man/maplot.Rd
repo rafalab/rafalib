@@ -4,9 +4,20 @@
 \alias{maplot}
 \title{Bland Altman plot aka MA plot}
 \usage{
-maplot(x, y, n = 10000, subset = NULL, xlab = NULL, ylab = NULL,
-  curve.add = TRUE, curve.col = 2, curve.span = 1/2, curve.lwd = 2,
-  curve.n = 2000, ...)
+maplot(
+  x,
+  y,
+  n = 10000,
+  subset = NULL,
+  xlab = NULL,
+  ylab = NULL,
+  curve.add = TRUE,
+  curve.col = 2,
+  curve.span = 1/2,
+  curve.lwd = 2,
+  curve.n = 2000,
+  ...
+)
 }
 \arguments{
 \item{x}{a numeric vector}
@@ -46,6 +57,7 @@ bias <- (signal/5 - 2)^2
 x <- signal + rnorm(n)
 y <- signal + bias + rnorm(n)  
 maplot(x,y)
+
 }
 \author{
 Rafael A. Irizarry

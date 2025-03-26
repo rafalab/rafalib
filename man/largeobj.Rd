@@ -23,6 +23,7 @@ y<-rnorm(10^6)
 z<-rnorm(2*10^6)
 w<-rnorm(3*10^6)
 largeobj(n=3)
+
 }
 \author{
 Michael I. Love

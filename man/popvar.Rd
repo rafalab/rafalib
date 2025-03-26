@@ -13,9 +13,9 @@ popvar(x, ...)
 }
 \description{
 Returns the population variance. Note that \code{\link{var}} returns
-the unbiased sample estimate of the population varaince. 
+the unbiased sample estimate of the population variance. 
 It simply multiplies the result of \code{\link{var}} by (n-1)  / n with n 
-the populaton size.
+the population size.
 }
 \examples{
 x <- c(0,1) ##variance should be 0.5^2=0.25

@@ -16,4 +16,7 @@
 #' colnames(x)=letters[1:10]
 #' write.csv(x,file=filename,row.names=FALSE)
 #' peek(filename)
+#' 
+#' @export
+
 peek <- function(x,n=2) scan(x,what="char",n=n,sep="\n")

@@ -1,28 +1,29 @@
-utils::globalVariables("biocLite")
 #' Install or update Bioconductor and CRAN packages
 #' 
-#' This is function simply a wrapper for \code{biocLite}. It first sources the code 
-#' from the Bioconductor site then calls \code{biocLite}.
+#' This function is simply a wrapper for \code{link[BiocManager]{install}}. If \code{BiocManager} is not installed it it automatically installed. 
 #' 
-#' @param ... arguments passed on to \code{biocLite}
+#' @param ... arguments passed on to \code{link[BiocManager]{install}}
 #' 
 #' @author Rafael A. Irizarry
 #' 
-#' @details Note that once you run this function in a session, you no
-#' longer need to call since 
-#' you can call \code{biocLite} directly.
-#' 
+#' @details If \code{BiocManager} is installed you can simply call \code{BiocManager::install} instead. 
 #' 
 #' @examples
-#' install_bioc("affy")
-install_bioc <- function(...){
-    internet <- try(source("http://bioconductor.org/biocLite.R"), silent=TRUE) 
-    if(!class(internet)=="try-error") 
-        { 
-            biocLite(...)
-        } else 
-            { 
-                stop("connection to http://bioconductor.org not successfull\n") 
-            } 
-}
+#' \donttest{
+#'   install_bioc("affy")
+#' }
+#' @export
 
+install_bioc <- function(...) {
+  if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    stop("The BiocManager package is required. Please install it using install.packages('BiocManager').")
+  }
+  
+  result <- try(BiocManager::install(...), silent = TRUE)
+  if (!inherits(result, "try-error")) {
+    message("Installation via BiocManager was successful.")
+    return(invisible(result))
+  } else {
+    stop("Installation via BiocManager::install failed.\n")
+  }
+}

@@ -12,7 +12,9 @@
 #' group = c("a","a","b","b")
 #' plot(seq_along(group),col=as.fumeric(group))
 #' 
-as.fumeric <- function(x,levels=unique(x)) {
+#' @export
+
+as.fumeric <- function(x, levels = unique(x)) {
   if(!is.character(x)) stop("'x' must be a character")
   as.numeric(factor(x,levels=levels))
 }

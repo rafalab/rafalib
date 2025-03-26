@@ -15,6 +15,10 @@
 #' z<-rnorm(2*10^6)
 #' w<-rnorm(3*10^6)
 #' largeobj(n=3)
+#' 
+#' @importFrom utils head object.size
+#' @export
+
 
 largeobj <- function(n=5, units="Mb") {
   # use 'aaa' here in anonymous function because there seems

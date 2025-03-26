@@ -13,6 +13,9 @@
 #' x <- c(0,1) ##variance should be 0.5^2=0.25
 #' var(x) 
 #' popvar(x)
+#' @importFrom stats var
+#' @export
+
 popvar <- function(x,...){
 	if(is.matrix(x)){
 		n <- nrow(x) } else{

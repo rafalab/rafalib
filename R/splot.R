@@ -17,6 +17,9 @@
 #' y <- rnorm(1e5)
 #' splot(x,y,pch=16,col=rgb(0,0,0,.25))
 #' 
+#' @import graphics
+#' @export
+
 splot <- function(x,y,n=10000,subset=NULL,xlab=NULL,ylab=NULL,...){
     if(is.null(xlab)) xlab=deparse(substitute(x))
     if(is.null(ylab)) ylab=deparse(substitute(y))

@@ -23,6 +23,7 @@ x<-matrix(round(rnorm(10^4),2),1000,10)
 colnames(x)=letters[1:10]
 write.csv(x,file=filename,row.names=FALSE)
 peek(filename)
+
 }
 \author{
 Michael I. Love
