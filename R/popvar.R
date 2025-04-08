@@ -35,6 +35,7 @@ popvar <- function(x,...){
 #' @param x a numeric vector or an R object which is coercible to one by \code{as.vector(x, "numeric")}.
 #' @param na.rm logical. Should missing values be removed?
 #' 
+#' @export
 
 popsd <- function(x, na.rm=FALSE){
 	sqrt(popvar(if (is.vector(x)) x else as.double(x), na.rm = na.rm))

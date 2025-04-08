@@ -1,6 +1,6 @@
 Package: rafalib
 Type: Package
-Version: 1.0.3
+Version: 1.0.4
 Title: Convenience Functions for Routine Data Exploration
 Authors@R: c(person(c("Rafael", "A."), "Irizarry", email = "rafael_irizarry@dfci.harvard.edu",
                   role = c("aut", "cre")),
